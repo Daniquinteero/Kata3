@@ -3,9 +3,20 @@ package kata3git;
 public class Kata3Git {
 
     public static void main(String[] args) {
-        // Versión 1
+        // Versión 2
+        Histograma<String> histogram = new Histograma();
         
-        HistogramDisplay histogramDisplay = new HistogramDisplay( "HISTOGRAMA");
+        histogram.increment("ulpgc.es");
+        histogram.increment("ulpgc.es");
+        histogram.increment("ulpgc.es");
+        histogram.increment("dis.ulpgc.es");
+        histogram.increment("eii.ulpgc.es");
+        histogram.increment("eii.ulpgc.es");
+        histogram.increment("gmail.com");
+        histogram.increment("gmail.com");
+        histogram.increment("eii.ulpgc.es");
+        
+        HistogramDisplay histogramDisplay = new HistogramDisplay(histogram, "HISTOGRAMA");
         histogramDisplay.execute();
 
     }
